@@ -84,7 +84,7 @@ function App() {
         fullDescription: "Project branding untuk Komunitas SCSI yang menonjolkan sisi dinamis dan modern menggunakan Alight Motion.",
         tech: ["Alight Motion", "Premiere Pro", "After Effects"],
         videoUrl: motionVid,
-        demoUrl: "https://instagram.com/zaki-ramadhan"
+        demoUrl: "#"
       },
       {
         id: 102,
@@ -94,7 +94,7 @@ function App() {
         fullDescription: "Project untuk branding Himpunan Mahasiswa yang menonjolkan sisi dinamis dan modern menggunakan Alight Motion.",
         tech: ["Alight Motion"],
         videoUrl: himsi,
-        demoUrl: "https://instagram.com/zaki-ramadhan"
+        demoUrl: "#"
       },
       {
         id: 103,
@@ -104,7 +104,7 @@ function App() {
         fullDescription: "Project untuk event tahunan kampus yaitu PBAK fakultas saintek yang menonjolkan sisi dinamis dan modern menggunakan Alight Motion.",
         tech: ["Alight Motion"],
         videoUrl: pbak,
-        demoUrl: "https://instagram.com/zaki-ramadhan"
+        demoUrl: "#"
       }
     ]
   };
@@ -265,6 +265,7 @@ function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {projectsData[activeTab].map((proj) => (
+              
               <ProjectCard 
                 key={proj.id} 
                 {...proj} 

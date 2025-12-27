@@ -15,19 +15,23 @@ const ProjectCard = ({ title, tag, description, imageUrl, videoUrl, onClick }) =
           
           {/* Sisi Media (Gambar/Video) */}
           <div className="w-full aspect-video overflow-hidden bg-gray-900 relative">
-            {videoUrl ? (
+            {/* CEK VIDEO DULU */}
+            {videoUrl && (
               <video 
                 src={videoUrl} 
                 autoPlay 
                 muted 
                 loop 
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
               />
-            ) : (
+            )}
+
+            {/* CEK GAMBAR (Hanya tampil jika ada imageUrl DAN tidak ada videoUrl) */}
+            {imageUrl && !videoUrl && (
               <img 
                 src={imageUrl} 
                 alt={title} 
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
               />
             )}
             {/* Overlay Biru khas P3 */}
